@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe4e1;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ff0077fb;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color:  #d63384;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff00bf;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Business Card Request Form</h1>
+
+        <form action="https://formspree.io/f/mnnqyzkg" method="post">
+            <!-- 1. بيانات العميل الأساسية -->
+            <h2>1. Basic Client Information</h2>
+            <label for="name">What is your name or your company's name?</label>
+            <input type="text" id="name" name="name" placeholder="Enter name or company name" required>
+
+            <label for="job_title">What is your job title?</label>
+            <input type="text" id="job_title" name="job_title" placeholder="e.g., CEO, Designer, Engineer" required>
+
+            <label for="industry">What is your field of work or industry?</label>
+            <input type="text" id="industry" name="industry" placeholder="e.g., Technology, Marketing, Healthcare" required>
+
+            <label for="logo">Do you have a logo? (Provide SVG/PNG link if available)</label>
+            <input type="text" id="logo" name="logo" placeholder="Provide a link to your logo">
+
+            <!-- 2. معلومات الاتصال -->
+            <h2>2. Contact Information</h2>
+            <label for="phone_numbers">What phone number(s) would you like to display?</label>
+            <textarea id="phone_numbers" name="phone_numbers" placeholder="Office number, mobile number, etc." required></textarea>
+
+            <label for="email">What is your email address?</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="address">Do you have an office address to include?</label>
+            <textarea id="address" name="address" placeholder="Office location (if applicable)"></textarea>
+
+            <label for="social_links">Do you want to add social media links?</label>
+            <textarea id="social_links" name="social_links" placeholder="e.g., LinkedIn, Instagram, Facebook"></textarea>
+
+            <label for="website_qr">Do you have a website or QR code to include?</label>
+            <input type="text" id="website_qr" name="website_qr" placeholder="Provide website link or QR code link">
+
+            <!-- 3. التصميم والهوية البصرية -->
+            <h2>3. Design and Visual Identity</h2>
+            <label for="preferred_colors">Do you have specific colors to use?</label>
+            <input type="text" id="preferred_colors" name="preferred_colors" placeholder="List preferred colors" required>
+
+            <label for="design_type">What type of design do you prefer?</label>
+            <textarea id="design_type" name="design_type" placeholder="e.g., Modern, Creative, Minimalist" required></textarea>
+
+            <label for="card_examples">Do you have examples of cards you like?</label>
+            <textarea id="card_examples" name="card_examples" placeholder="Provide links to examples"></textarea>
+
+            <!-- 4. التفاصيل التقنية -->
+            <h2>4. Technical Details</h2>
+            <label for="card_size">What size do you need for the card?</label>
+            <input type="text" id="card_size" name="card_size" placeholder="e.g., 90x54 mm (standard)" required>
+
+            <label for="card_sides">Single-sided or double-sided card?</label>
+            <select id="card_sides" name="card_sides">
+                <option value="single">Single-sided</option>
+                <option value="double">Double-sided</option>
+            </select>
+
+            <label for="printing_techniques">Do you have preferences for printing techniques?</label>
+            <textarea id="printing_techniques" name="printing_techniques" placeholder="e.g., Gold foil, Embossed, Matte"></textarea>
+
+            <label for="additional_elements">Do you need to add a personal photo or other elements?</label>
+            <textarea id="additional_elements" name="additional_elements" placeholder="e.g., Personal photo, Icons"></textarea>
+
+            <!-- 5. المحتوى المكتوب على البطاقة -->
+            <h2>5. Card Content</h2>
+            <label for="slogan">Do you have a slogan or tagline?</label>
+            <textarea id="slogan" name="slogan" placeholder="e.g., 'Making Your Dreams a Reality'"></textarea>
+
+            <label for="services">Do you need to add a brief list of services?</label>
+            <textarea id="services" name="services" placeholder="e.g., Web Development, Graphic Design"></textarea>
+
+            <!-- 6. المتطلبات النهائية -->
+            <h2>6. Final Requirements</h2>
+            <label for="restrictions">Are there any design restrictions or instructions?</label>
+            <textarea id="restrictions" name="restrictions" placeholder="e.g., Avoid certain colors, No decorative elements"></textarea>
+
+            <label for="deadline">What is the expected delivery date?</label>
+            <input type="date" id="deadline" name="deadline" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
